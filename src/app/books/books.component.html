@@ -1,22 +1,22 @@
 
 <div class="container">
-  <table class="table">
+  <table class="table" >
     <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Status</th>
     </tr>
 
     </thead>
 
     <tbody>
-    <tr>
+    <tr *ngFor="let book of books" >
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>{{book.title}}</td>
+      <td>{{book.author}}</td>
+      <td>{{book.free}}</td>
     </tr>
 
     </tbody>
