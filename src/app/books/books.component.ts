@@ -23,5 +23,5 @@ export class BooksComponent implements OnInit {
     this.apiService.getAllBooks().subscribe(res =>{this.books = res},
       error => {alert("Error while getting all books")});
   }
-
+  
 }

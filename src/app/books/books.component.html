@@ -12,11 +12,12 @@
     </thead>
 
     <tbody>
-    <tr *ngFor="let book of books" >
-      <th scope="row">1</th>
+    <tr *ngFor="let book of books; let i=index" >
+      <th scope="row">{{i+1}}</th>
       <td>{{book.title}}</td>
       <td>{{book.author}}</td>
-      <td>{{book.free}}</td>
+      <td *ngIf="book.free==true" class="text-success">{{book.free}}</td>
+      <td *ngIf="book.free==false" class="text-warning">{{book.free}}</td>
     </tr>
 
     </tbody>
