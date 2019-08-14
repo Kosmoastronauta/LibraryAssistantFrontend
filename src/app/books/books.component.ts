@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Book} from "./model/book";
 import {ApiBookService} from "../shared/api-book.service";
+import {ReservationService} from "../shared/reservation.service";
+import {Reservation} from "../model/reservation";
 
 @Component({
   selector: 'app-books',
@@ -10,8 +12,9 @@ import {ApiBookService} from "../shared/api-book.service";
 export class BooksComponent implements OnInit {
 
   books: Book[] = [];
+  reservationInfo: Reservation;
 
-  constructor(private apiService: ApiBookService) {
+  constructor(private apiService: ApiBookService, private reservationService: ReservationService) {
   }
 
   ngOnInit() {
@@ -19,8 +22,25 @@ export class BooksComponent implements OnInit {
   }
 
   public getAllBooks() {
-    this.apiService.getAllBooks().subscribe(res =>{this.books = res},
-      error => {alert("Error while getting all books")});
+    this.apiService.getAllBooks().subscribe(res => {
+        this.books = res
+      },
+      error => {
+        alert("Error while getting all books")
+      });
   }
-  
+
+  public getDetailsAboutReservationNotReturnedBookByBookId(bookId: number) {
+    this.reservationService.getDetailsAboutReservationByBook(bookId).subscribe(res => {
+      this.reservationInfo = res
+    },
+  error =>
+    {
+      alert("Error while getting info about reservation")
+    }
+  )
+
+  }
+
+
 }

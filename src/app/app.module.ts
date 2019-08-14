@@ -9,6 +9,7 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import { ReservationComponent } from './reservation/reservation.component';
 
 const appRoutes: Routes = [
   {
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     BooksComponent,
     NotFoundComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    ReservationComponent
   ],
   imports: [
     BrowserModule,
