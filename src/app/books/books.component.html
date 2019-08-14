@@ -17,7 +17,7 @@
       <td>{{book.author}}</td>
       <td *ngIf="book.free==true" class="text-success">Avaliable</td>
       <td *ngIf="book.free==false" class="text-danger">Occupied
-        <button class="btn btn-primary" (click)="showDetailsAboutReservation(book)">Details</button></td>
+        <button class="btn btn-primary" (click)="getDetailsAboutReservationNotReturnedBookByBookId(book.id)">Details</button></td>
     </tr>
 
     </tbody>
