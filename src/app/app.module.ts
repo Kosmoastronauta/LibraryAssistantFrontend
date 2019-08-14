@@ -26,6 +26,10 @@ const appRoutes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
+  {
+    path:'reservation',
+    component: ReservationComponent
+  },
 
   {
     path: '**',

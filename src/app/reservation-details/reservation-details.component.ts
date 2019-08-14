@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BooksComponent} from "../books/books.component";
 
 @Component({
   selector: 'app-reservation-details',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservationDetailsComponent implements OnInit {
 
+  bookComponent: BooksComponent;
   constructor() { }
 
   ngOnInit() {
