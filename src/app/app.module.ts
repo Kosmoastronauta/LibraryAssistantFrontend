@@ -16,9 +16,13 @@ const appRoutes: Routes = [
     component: BooksComponent
   },
   {
-    path: '',
-    component: NavigationComponent,
-    pathMatch: 'full'
+    path: 'navigation',
+    component: NavigationComponent
+  },
+
+  {
+    path: 'home',
+    component: HomeComponent,
   },
 
   {
