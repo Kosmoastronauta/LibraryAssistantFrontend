@@ -27,7 +27,17 @@
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery-1.8.3.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/bootstrap/dist/js/scripts.js",
+              "node_modules/bootstrap/js/html5shiv.js",
+              "node_modules/bootstrap/js/lte-ie7.js",
+              "node_modules/bootstrap/js/jquery.js",
+              "node_modules/bootstrap/js/jquery.scrollTo.min.js",
+              "node_modules/bootstrap/js/jquery.nicescroll.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
