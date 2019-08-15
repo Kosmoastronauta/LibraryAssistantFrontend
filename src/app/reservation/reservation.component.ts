@@ -9,15 +9,26 @@ import {Reservation} from "../model/reservation";
 export class ReservationComponent implements OnInit {
 
 
-  public res = {};
-  public reservation: Reservation| {};
+
+  public reservation: Reservation;
   constructor(private reservationService:ReservationService)
   {
-    this.res = reservationService.reservation;
-    this.reservation = this.res;
   }
 
   ngOnInit() {
+    this.loadReservation()
   }
+
+  public loadReservation() {
+    this.reservationService.getDetailsAboutReservationByBook(this.reservationService.bookId).subscribe(res => {
+        this.reservation = res;
+      },
+      error => {
+        alert("Error while getting info about reservation")
+      }
+    )
+  }
+
+
 
 }

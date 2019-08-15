@@ -43,4 +43,9 @@ export class BooksComponent implements OnInit {
 
   }
 
+  public saveBookId(bookId:number)
+  {
+    this.reservationService.bookId = bookId;
+  }
+
 }
