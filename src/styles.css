@@ -1,3 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/css/style.css";
+@import '~bootstrap/css/bootstrap.min.css';
 @import '~font-awesome/css/font-awesome.css';
+@import "~bootstrap/css/bootstrap.min.css";
+@import "~bootstrap/css/bootstrap-datepicker.css";
+@import "~bootstrap/css/widgets.css";
+@import "~bootstrap/css/owl.carousel.css";
+@import "~bootstrap/css/bootstrap-colorpicker.css";
+@import "~bootstrap/css/widgets.css";
+@import "~bootstrap/css/xcharts.min.css";
+@import "~bootstrap/css/fullcalendar.css";
+@import "~bootstrap/css/owl.carousel.css";
+@import "~bootstrap/css/jquery-jvectormap-1.2.2.css";
+@import "~bootstrap/css/line-icons.css";
+@import "~bootstrap/css/elegant-icons-style.css";
+@import "~bootstrap/css/style-responsive.css";
+@import "~bootstrap/css/bootstrap-theme.css";
+@import "~bootstrap/css/font-awesome.min.css";
+@import "~bootstrap/css/daterangepicker.css";
+@import "~bootstrap/css/daterangepicker.css";
+@import "~bootstrap/css/jquery-ui-1.10.4.min.css";
+

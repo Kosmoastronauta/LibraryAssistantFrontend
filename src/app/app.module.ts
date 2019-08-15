@@ -23,6 +23,12 @@ const appRoutes: Routes = [
   },
 
   {
+    path: '',
+    component: NavigationComponent,
+    pathMatch: 'full'
+  },
+
+  {
     path: 'home',
     component: HomeComponent,
   },
