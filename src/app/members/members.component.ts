@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Member} from "./model/member";
+import {MemberService} from "../shared/member.service";
 
 @Component({
   selector: 'app-members',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembersComponent implements OnInit {
 
-  constructor() { }
+  members: Member[] = [];
+  constructor(private memberService: MemberService) { }
 
   ngOnInit() {
+    this.getAllMembers();
+  }
+
+  public getAllMembers()
+  {
+    this.memberService.getAllMembers().subscribe(res => {
+        this.members = res
+      },
+      error => {
+        alert("Error while getting all members")
+      });
   }
 
 }
