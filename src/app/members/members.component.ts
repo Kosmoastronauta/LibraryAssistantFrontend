@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Member} from "./model/member";
 import {MemberService} from "../shared/member.service";
 
@@ -9,15 +9,30 @@ import {MemberService} from "../shared/member.service";
 })
 export class MembersComponent implements OnInit {
 
+
+ public memberSearch: SearchMember = {
+    name: '',
+    lastName: ''
+  };
+
   members: Member[] = [];
-  constructor(private memberService: MemberService) { }
+  public member: Member = {
+    name: '',
+    lastName: '',
+    email: '',
+    numberOfCurrentlyBorrowedBooks: 0
+  };
+
+
+
+  constructor(private memberService: MemberService) {
+  }
 
   ngOnInit() {
     this.getAllMembers();
   }
 
-  public getAllMembers()
-  {
+  public getAllMembers() {
     this.memberService.getAllMembers().subscribe(res => {
         this.members = res
       },
@@ -26,4 +41,26 @@ export class MembersComponent implements OnInit {
       });
   }
 
+  public searchMemberByNameAndLastName() {
+    // alert(this.member.name);
+    if (this.member.name == "" && this.member.lastName == "") {
+      this.getAllMembers();
+    } else {
+      this.memberService.postSearchMemberNameAndLastName(this.member).subscribe(
+        res => {
+          this.members = res;
+          // location.reload();
+        },
+        error => {
+          alert("Error while searching member");
+        }
+      );
+    }
+  }
+
+}
+
+export interface SearchMember {
+  name: string;
+  lastName: string;
 }

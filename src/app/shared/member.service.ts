@@ -9,7 +9,7 @@ import {Member} from "../members/model/member";
 export class MemberService {
   private BASE_URL = "http://localhost:8080";
   private ALL_MEMBERS_URL = `${this.BASE_URL}\\members\\`;
-  private ALL_MEMBERS_SEARCH_URL = `${this.BASE_URL}\\members\\search\\`;
+  private ALL_MEMBERS_SEARCH = `${this.BASE_URL}\\members\\search\\`;
 
   constructor(private http: HttpClient) { }
 
@@ -18,9 +18,9 @@ export class MemberService {
     return this.http.get<Member[]>(this.ALL_MEMBERS_URL);
   }
 
-  postSearchMemberNameAndLastName(member:Member)
+  postSearchMemberNameAndLastName(member:Member): Observable<any>
   {
-    return this.http.post(this.ALL_MEMBERS_SEARCH_URL)
+    return this.http.post<Member[]>(this.ALL_MEMBERS_SEARCH,member);
   }
 
 }
