@@ -11,6 +11,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { ReservationComponent } from './reservation/reservation.component';
 import { ReservationDetailsComponent } from './reservation-details/reservation-details.component';
+import { MembersComponent } from './members/members.component';
 
 const appRoutes: Routes = [
   {
@@ -51,7 +52,8 @@ const appRoutes: Routes = [
     HomeComponent,
     NavigationComponent,
     ReservationComponent,
-    ReservationDetailsComponent
+    ReservationDetailsComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,
