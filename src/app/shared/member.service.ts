@@ -8,7 +8,7 @@ import {Member} from "../members/model/member";
 })
 export class MemberService {
   private BASE_URL = "http://localhost:8080";
-  private ALL_MEMBERS_URL = `${this.BASE_URL}\\books\\`;
+  private ALL_MEMBERS_URL = `${this.BASE_URL}\\members\\`;
 
   constructor(private http: HttpClient) { }
 

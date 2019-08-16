@@ -30,6 +30,11 @@ const appRoutes: Routes = [
   },
 
   {
+   path:'members',
+   component:MembersComponent
+  },
+
+  {
     path: 'home',
     component: HomeComponent,
   },

@@ -451,11 +451,10 @@
               <tbody>
               <tr>
                 <th><i class=""></i> #</th>
-                <th><i class=""></i> Title</th>
-                <th><i class=""></i> Author</th>
-                <th><i class=""></i> Edition</th>
-                <th><i class=""></i> Status</th>
-                <th><i class=""></i> Details</th>
+                <th><i class=""></i> First Name</th>
+                <th><i class=""></i> Last Name</th>
+                <th><i class=""></i> Email</th>
+                <th><i class=""></i> Books to return</th>
               </tr>
               <tr *ngFor="let member of members; let i=index">
                 <th scope="row" >{{i+1}}</th>
@@ -463,17 +462,19 @@
                 <td>{{member.lastName}}</td>
                 <td>{{member.email}}</td>
                 <td>{{member.numberOfCurrentlyBorrowedBooks}}</td>
-                <td *ngIf="member.numberOfCurrentlyBorroweBooks!=0">
-                  <div class="dropdown">
-                    <button (click)="getDetailsAboutReservationNotReturnedBookByBookId(book.id)" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Details
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">From: {{reservation.start}}</a>
-                      <a class="dropdown-item" href="#">To {{reservation.end}}</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div></td>
+                <td *ngIf="member.numberOfCurrentlyBorrowedBooks!=0">
+<!--                  <div class="dropdown">-->
+<!--                    <button (click)="" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                      Details-->
+<!--                    </button>-->
+<!--                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">-->
+<!--                      <a class="dropdown-item" href="#">From: {{reservation.start}}</a>-->
+<!--                      <a class="dropdown-item" href="#">To {{reservation.end}}</a>-->
+<!--                      <a class="dropdown-item" href="#">Something else here</a>-->
+<!--                    </div>-->
+<!--                  </div>
+</td>-->
+                </td>
 
               </tr>
 
