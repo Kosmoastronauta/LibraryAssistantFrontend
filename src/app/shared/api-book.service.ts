@@ -19,9 +19,4 @@ export class ApiBookService {
     return this.http.get<Book[]>(this.ALL_BOOKS_URL);
   }
 
-  postBook(book: Book): Observable<any> {
-    return null;
-  }
-
- 
 }
