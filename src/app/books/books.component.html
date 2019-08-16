@@ -465,13 +465,12 @@
                 <td>{{book.free}}</td>
                 <td *ngIf="book.free==false">
                   <div class="dropdown">
-                    <button (click)="getDetailsAboutReservationNotReturnedBookByBookId(book.id)" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button (click)="getDetailsAboutReservationNotReturnedBookByBookId(book.id)" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Details
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">From: {{reservation.start}}</a>
-                      <a class="dropdown-item" href="#">To {{reservation.end}}</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
+                      <a class="dropdown-item" href="#"><h2>From: <span class="font-weight-bold">{{reservation.start}}</span></h2></a>
+                      <a class="dropdown-item" href="#"><h2>To: <span class="font-weight-bold">{{reservation.end}}</span></h2></a>
                     </div>
                   </div></td>
 
