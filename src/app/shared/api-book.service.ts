@@ -19,4 +19,9 @@ export class ApiBookService {
     return this.http.get<Book[]>(this.ALL_BOOKS_URL);
   }
 
+  CreateBook(book:Book): Observable<Book>
+  {
+    return this.http.post<Book>(this.ALL_BOOKS_URL,book);
+  }
+
 }
