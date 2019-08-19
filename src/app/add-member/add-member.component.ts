@@ -10,7 +10,12 @@ import {error} from "util";
 })
 export class AddMemberComponent implements OnInit {
 
-  public member: Member;
+  public member: Member = {
+    name: '',
+    lastName: '',
+    email: '',
+    numberOfCurrentlyBorrowedBooks: 0
+  };
   constructor(private memberService:MemberService) { }
 
   ngOnInit() {
@@ -18,14 +23,19 @@ export class AddMemberComponent implements OnInit {
 
   public createMember()
   {
+
+
     this.memberService.postCreateMember(this.member).subscribe(
       res => {
-        this.member = res
+        this.member = res;
+        alert('Created User \n'+ 'Name: ' + this.member.name + '\nLast Name: ' + this.member.lastName + '\nEmail: ' + this.member.email);
       },
       error => {
         alert("Error while creating new member")
       }
     );
+
+
   }
 
 }
