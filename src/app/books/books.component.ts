@@ -43,7 +43,7 @@ export class BooksComponent implements OnInit {
   public getDetailsAboutReservationNotReturnedBookByBookId(bookId: number) {
     this.reservationService.getDetailsAboutReservationByBook(bookId).subscribe(res => {
         this.reservation = res;
-        alert(this.reservation.start);
+        alert("FROM: " + this.reservation.start + "\nTO:" + this.reservation.end);
       },
       error => {
         alert("Error while getting info about reservation")
