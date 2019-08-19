@@ -9,12 +9,6 @@ import {MemberService} from "../shared/member.service";
 })
 export class MembersComponent implements OnInit {
 
-
- public memberSearch: SearchMember = {
-    name: '',
-    lastName: ''
-  };
-
   members: Member[] = [];
   public member: Member = {
     name: '',
@@ -22,8 +16,6 @@ export class MembersComponent implements OnInit {
     email: '',
     numberOfCurrentlyBorrowedBooks: 0
   };
-
-
 
   constructor(private memberService: MemberService) {
   }
