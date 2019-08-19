@@ -23,4 +23,9 @@ export class MemberService {
     return this.http.post<Member[]>(this.ALL_MEMBERS_SEARCH,member);
   }
 
+  postCreateMember(member:Member):Observable<any>
+  {
+    return this.http.post<Member>(this.ALL_MEMBERS_URL,member);
+  }
+
 }

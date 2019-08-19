@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Member} from "../members/model/member";
+import {MemberService} from "../shared/member.service";
 
 @Component({
   selector: 'app-add-member',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddMemberComponent implements OnInit {
 
-  constructor() { }
+  public member: Member;
+  constructor(private memberService:MemberService) { }
 
   ngOnInit() {
+  }
+
+  public createMember()
+  {
+    this.memberService.
   }
 
 }
