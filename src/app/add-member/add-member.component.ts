@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Member} from "../members/model/member";
 import {MemberService} from "../shared/member.service";
+import {error} from "util";
 
 @Component({
   selector: 'app-add-member',
@@ -17,7 +18,14 @@ export class AddMemberComponent implements OnInit {
 
   public createMember()
   {
-    this.memberService.
+    this.memberService.postCreateMember(this.member).subscribe(
+      res => {
+        this.member = res
+      },
+      error => {
+        alert("Error while creating new member")
+      }
+    );
   }
 
 }
