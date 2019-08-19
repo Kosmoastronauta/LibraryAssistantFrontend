@@ -41,6 +41,10 @@ const appRoutes: Routes = [
     path:'add-member',
     component:AddMemberComponent
   },
+  {
+    path: 'add-book',
+    component: AddBookComponent,
+  },
 
   {
     path: 'home',
