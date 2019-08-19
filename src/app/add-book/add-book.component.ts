@@ -16,7 +16,7 @@ export class AddBookComponent implements OnInit {
   ngOnInit() {
   }
 
-  public addBook()
+  public createdBook()
   {
     this.bookService.CreateBook(this.book).subscribe(
       res => {
