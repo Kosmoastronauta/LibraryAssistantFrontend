@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from "../books/model/book";
 import {ApiBookService} from "../shared/api-book.service";
+import {Member} from "../members/model/member";
 
 @Component({
   selector: 'app-add-book',
@@ -9,7 +10,13 @@ import {ApiBookService} from "../shared/api-book.service";
 })
 export class AddBookComponent implements OnInit {
 
-  book: Book;
+  public book: Book = {
+    id:1,
+    title: '',
+    author: '',
+    edition: '',
+    free: true
+  };
 
   constructor(private bookService:ApiBookService) { }
 
@@ -18,6 +25,8 @@ export class AddBookComponent implements OnInit {
 
   public createdBook()
   {
+    // alert('Created Book \n' + 'Title: ' + this.book.title + '\nAuthor: ' + this.book.author + '\nEdition: ' + this.book.edition);
+
     this.bookService.CreateBook(this.book).subscribe(
       res => {
         this.book = res;

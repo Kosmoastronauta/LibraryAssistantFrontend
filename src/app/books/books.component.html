@@ -354,9 +354,9 @@
           </ul>
         </li>
         <li class="sub-menu">
-          <a href="javascript:;" class="">
+          <a routerLink="/add-book" class="">
             <i class="icon_desktop"></i>
-            <span>UI Fitures</span>
+            <span>Add Book</span>
             <span class="menu-arrow arrow_carrot-right"></span>
           </a>
           <ul class="sub">
@@ -446,12 +446,12 @@
             <form>
               <div class="row">
                 <div class="col">
-                  <input type="text" class="form-control form-control-lg" placeholder="Title">
+                  <input type="text" class="form-control form-control-lg" placeholder="Title" [(ngModel)]="book.title" name="title">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control form-control-lg" placeholder="Author">
+                  <input type="text" class="form-control form-control-lg" placeholder="Author" [(ngModel)]="book.author" name="author">
                 </div>
-                <button type="button" class="btn btn-primary">Search</button>
+                <button (click)="searchBooksByTitleAndAuthor()"  type="button" class="btn btn-primary">Search</button>
               </div>
             </form>
           </div>
@@ -481,9 +481,9 @@
                     <button (click)="getDetailsAboutReservationNotReturnedBookByBookId(book.id)" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Details
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item"><h2>From: <span class="font-weight-bold">{{reservation.start}}</span></h2></a>
-                      <a class="dropdown-item"><h2>To: <span class="font-weight-bold">{{reservation.end}}</span></h2></a>
+                    <div class="dropdown" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item"><h2>From: {{reservation.start}}</h2></a>
+                      <a class="dropdown-item"><h2>To: {{reservation.end}}</h2></a>
                     </div>
                   </div></td>
 

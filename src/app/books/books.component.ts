@@ -13,8 +13,16 @@ import {Reservation} from "../model/reservation";
 export class BooksComponent implements OnInit {
 
   books: Book[] = [];
-  reservation: Reservation;
+  public reservation: Reservation;
 
+  public book: Book =
+    {
+      id: 1,
+      title: '',
+      author: '',
+      edition: '',
+      free: false
+    };
   constructor(private apiService: ApiBookService, private reservationService: ReservationService) {
 
   }
@@ -34,7 +42,8 @@ export class BooksComponent implements OnInit {
 
   public getDetailsAboutReservationNotReturnedBookByBookId(bookId: number) {
     this.reservationService.getDetailsAboutReservationByBook(bookId).subscribe(res => {
-        this.reservation = res
+        this.reservation = res;
+        alert(this.reservation.start);
       },
       error => {
         alert("Error while getting info about reservation")
@@ -43,9 +52,20 @@ export class BooksComponent implements OnInit {
 
   }
 
-  public saveBookId(bookId:number)
+  public searchBooksByTitleAndAuthor()
   {
-    this.reservationService.bookId = bookId;
+    if(this.book.title=="" && this.book.author=="")
+    {
+      this.getAllBooks();
+    }
+    else
+      this.apiService.searchBookByTitleAndAuthor(this.book).subscribe(
+        res => {
+          this.books = res;
+        },
+        error => {
+          alert("Error while searching books");
+        }
+      );
   }
-
 }
