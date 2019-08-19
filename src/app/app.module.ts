@@ -13,6 +13,7 @@ import { MembersComponent } from './members/members.component';
 import { AddMemberComponent } from './add-member/add-member.component';
 import {FormsModule} from "@angular/forms";
 import {ReactiveFormsModule} from "@angular/forms";
+import { AddBookComponent } from './add-book/add-book.component';
 
 
 const appRoutes: Routes = [
@@ -66,7 +67,8 @@ const appRoutes: Routes = [
     ReservationComponent,
     ReservationDetailsComponent,
     MembersComponent,
-    AddMemberComponent
+    AddMemberComponent,
+    AddBookComponent
   ],
   imports: [
     BrowserModule,
