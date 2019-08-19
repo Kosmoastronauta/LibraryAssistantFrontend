@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/css/style.css";
 @import '~bootstrap/css/bootstrap.min.css';
-@import '~font-awesome/css/font-awesome.css';
+@import '~font-awesome/css/font-awesome.min.css';
 @import "~bootstrap/css/bootstrap.min.css";
 @import "~bootstrap/css/bootstrap-datepicker.css";
 @import "~bootstrap/css/widgets.css";

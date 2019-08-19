@@ -32,7 +32,7 @@
 
 <!--</div>-->
 <!DOCTYPE html>
-<html lang="en">
+<html style="overflow: hidden;" lang="en">
 
   <head>
     <meta charset="utf-8">
@@ -68,11 +68,11 @@
     <!--  <link href="css/xcharts.min.css" rel=" stylesheet">-->
     <!--  <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">-->
     <!--  &lt;!&ndash; =======================================================-->
-    Theme Name: NiceAdmin
-    Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-    Author: BootstrapMade
-    Author URL: https://bootstrapmade.com
-    ======================================================= -->
+<!--    Theme Name: NiceAdmin-->
+<!--    Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/-->
+<!--    Author: BootstrapMade-->
+<!--    Author URL: https://bootstrapmade.com-->
+<!--    ======================================================= &ndash;&gt;-->
   </head>
 
   <body>
@@ -344,19 +344,20 @@
 
       <!--sidebar start-->
       <aside>
-        <div id="sidebar" class="nav-collapse ">
+        <div id="sidebar" class="nav-collapse " style="overflow: hidden; outline: currentColor none medium;" tabindex="5000">
+
           <!-- sidebar menu start-->
           <ul class="sidebar-menu">
             <li class="active">
-              <a class="" href="index.html">
+              <a class="" routerLink="/navigation">
                 <i class="icon_house_alt"></i>
-                <span>Dashboard</span>
+                <span>Home</span>
               </a>
             </li>
             <li class="sub-menu">
-              <a href="javascript:;" class="">
+              <a routerLink="/add-member" class="">
                 <i class="icon_document_alt"></i>
-                <span>Forms</span>
+                <span>Add Member</span>
                 <span class="menu-arrow arrow_carrot-right"></span>
               </a>
               <ul class="sub">
@@ -393,7 +394,7 @@
 
             <li class="sub-menu" >
               <a routerLink="/books" class="">
-                <i class="icon_table"></i>
+                <i class="fa fa-book"></i>
                 <span>Books</span>
                 <span class="menu-arrow arrow_carrot-right"></span>
               </a>
@@ -404,7 +405,7 @@
 
             <li class="sub-menu">
               <a routerLink="/members" class="">
-                <i class="icon_documents_alt"></i>
+                <i class="icon_id-2_alt"></i>
                 <span>Members</span>
                 <span class="menu-arrow arrow_carrot-right"></span>
               </a>
@@ -428,11 +429,12 @@
         <section class="wrapper">
           <!--overview start-->
           <div class="row">
+
             <div class="col-lg-12">
-              <h3 class="page-header"><i class="fa fa-laptop"></i> Dashboard</h3>
+              <h3 class="page-header" routerLink="/navigation"><i class="fa fa-laptop"></i>Home</h3>
               <ol class="breadcrumb">
-                <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-                <li><i class="fa fa-laptop"></i>Dashboard</li>
+                <li><i class="fa fa-home"></i><a>Home</a></li>
+<!--                <li><i class="fa fa-laptop"></i>Home</li>-->
               </ol>
             </div>
           </div>

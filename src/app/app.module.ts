@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {AppComponent} from './app.component';
 import {BooksComponent} from './books/books.component';
 import {Router, RouterModule, Routes} from "@angular/router";
@@ -14,6 +13,7 @@ import { MembersComponent } from './members/members.component';
 import { AddMemberComponent } from './add-member/add-member.component';
 import {FormsModule} from "@angular/forms";
 import {ReactiveFormsModule} from "@angular/forms";
+
 
 const appRoutes: Routes = [
   {
@@ -34,6 +34,11 @@ const appRoutes: Routes = [
   {
    path:'members',
    component:MembersComponent
+  },
+
+  {
+    path:'add-member',
+    component:AddMemberComponent
   },
 
   {
