@@ -14,6 +14,7 @@ export class BooksComponent implements OnInit {
 
   books: Book[] = [];
   public reservation: Reservation;
+  public numberOfBookToBorrow: number;
 
   public book: Book =
     {
