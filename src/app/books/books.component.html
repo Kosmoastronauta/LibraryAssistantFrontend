@@ -474,7 +474,8 @@
                 <td>{{book.title}}</td>
                 <td>{{book.author}}</td>
                 <td>{{book.edition}}</td>
-                <td>{{book.free}}</td>
+                <td *ngIf="book.free==true" class="text-success"> Free</td>
+                <td *ngIf="book.free==false" class="text-danger"> Occupied</td>
                 <td >
                   <div *ngIf="book.free==false" class="">
                     <button (click)="getDetailsAboutReservationNotReturnedBookByBookId(book.id)" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
