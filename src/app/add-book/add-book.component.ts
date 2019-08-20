@@ -20,12 +20,10 @@ export class AddBookComponent implements OnInit {
 
   constructor(private bookService:ApiBookService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public createdBook()
   {
-    // alert('Created Book \n' + 'Title: ' + this.book.title + '\nAuthor: ' + this.book.author + '\nEdition: ' + this.book.edition);
 
     this.bookService.CreateBook(this.book).subscribe(
       res => {

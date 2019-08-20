@@ -18,13 +18,10 @@ export class AddMemberComponent implements OnInit {
   };
   constructor(private memberService:MemberService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public createMember()
   {
-
-
     this.memberService.postCreateMember(this.member).subscribe(
       res => {
         this.member = res;
@@ -34,8 +31,6 @@ export class AddMemberComponent implements OnInit {
         alert("Error while creating new member")
       }
     );
-
-
   }
 
 }

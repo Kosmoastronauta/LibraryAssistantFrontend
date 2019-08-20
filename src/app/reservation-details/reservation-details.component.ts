@@ -11,7 +11,5 @@ export class ReservationDetailsComponent implements OnInit {
   bookComponent: BooksComponent;
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

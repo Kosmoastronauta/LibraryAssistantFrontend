@@ -17,10 +17,10 @@ export class MembersComponent implements OnInit {
     numberOfCurrentlyBorrowedBooks: 0
   };
 
-  constructor(private memberService: MemberService) {
-  }
+  constructor(private memberService: MemberService) {}
 
-  ngOnInit() {
+  ngOnInit()
+  {
     this.getAllMembers();
   }
 
@@ -50,9 +50,4 @@ export class MembersComponent implements OnInit {
     }
   }
 
-}
-
-export interface SearchMember {
-  name: string;
-  lastName: string;
 }

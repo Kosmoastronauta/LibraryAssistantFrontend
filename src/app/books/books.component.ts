@@ -24,11 +24,10 @@ export class BooksComponent implements OnInit {
       edition: '',
       free: false
     };
-  constructor(private apiService: ApiBookService, private reservationService: ReservationService) {
+  constructor(private apiService: ApiBookService, private reservationService: ReservationService) {}
 
-  }
-
-  ngOnInit() {
+  ngOnInit()
+  {
     this.getAllBooks();
   }
 
@@ -50,7 +49,6 @@ export class BooksComponent implements OnInit {
         alert("Error while getting info about reservation")
       }
     )
-
   }
 
   public searchBooksByTitleAndAuthor()

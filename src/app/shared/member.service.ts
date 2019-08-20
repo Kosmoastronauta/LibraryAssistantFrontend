@@ -11,7 +11,7 @@ export class MemberService {
   private ALL_MEMBERS_URL = `${this.BASE_URL}\\members\\`;
   private ALL_MEMBERS_SEARCH = `${this.BASE_URL}\\members\\search\\`;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getAllMembers(): Observable<Member[]>
   {
