@@ -14,7 +14,7 @@ export class BooksComponent implements OnInit {
 
   books: Book[] = [];
   public reservation: Reservation;
-  public numberOfBookToBorrow: number;
+  public bookToReserve: Book;
 
   public book: Book =
     {
@@ -66,5 +66,10 @@ export class BooksComponent implements OnInit {
           alert("Error while searching books");
         }
       );
+  }
+
+  public saveBookToReserve(book:Book)
+  {
+    this.reservationService.bookToReserve = book;
   }
 }

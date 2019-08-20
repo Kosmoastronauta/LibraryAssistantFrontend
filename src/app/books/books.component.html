@@ -482,7 +482,7 @@
                     </button>
                   </div>
                   <div *ngIf="book.free==true" class="">
-                    <button routerLink="/reserve" (click)="numberOfBookToBorrow=book.id" class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button routerLink="/reservation" (click)="saveBookToReserve(book)" class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Borrow
                     </button>
                   </div></td>

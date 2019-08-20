@@ -2,12 +2,14 @@ import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {Reservation} from "../model/reservation";
 import {HttpClient} from "@angular/common/http";
+import {Book} from "../books/model/book";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReservationService
 {
+  public bookToReserve: Book;
   public reservation = {};
   public bookId: number;
   private BASE_URL = "http://localhost:8080";
