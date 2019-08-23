@@ -3,6 +3,7 @@ import {Observable} from "rxjs";
 import {Reservation} from "../model/reservation";
 import {HttpClient} from "@angular/common/http";
 import {Book} from "../books/model/book";
+import {Member} from "../members/model/member";
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,8 @@ export class ReservationService
   private BASE_URL = "http://localhost:8080";
   private ALL_BOOKS_URL = `${this.BASE_URL}\\books\\`;
   private INFO_ABOUT_NOT_RETURNED_BOOK_IN_RESERVATION_URL = `${this.BASE_URL}\\reservation\\notReturned\\bookId`;
+  private RESERVATION_URL=`${this.BASE_URL}\\reservation\\`;
+  private MAKE_RESERVATION_URL=`${this.RESERVATION_URL}\\makeReservation\\`;
 
   constructor(private http: HttpClient) {}
 
@@ -23,5 +26,10 @@ export class ReservationService
     let newUrl = this.INFO_ABOUT_NOT_RETURNED_BOOK_IN_RESERVATION_URL + '/' + bookId + '/';
 
     return this.http.get<Reservation>(newUrl);
+  }
+
+  makeReservation(member:Member, book:Book)
+  {
+    let finalUrl = this.MAKE_RESERVATION_URL + '/' + book + '/' + member + '/';
   }
 }
