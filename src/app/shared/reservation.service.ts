@@ -30,6 +30,7 @@ export class ReservationService
 
   makeReservation(member:Member, book:Book)
   {
-    let finalUrl = this.MAKE_RESERVATION_URL + '/' + book + '/' + member + '/';
+    let finalUrl = this.MAKE_RESERVATION_URL + '/' + book.id + '/' + member.id + '/';
+    return this.http.post(finalUrl, null);
   }
 }

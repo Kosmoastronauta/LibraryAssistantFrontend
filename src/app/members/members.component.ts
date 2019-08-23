@@ -11,6 +11,7 @@ export class MembersComponent implements OnInit {
 
   members: Member[] = [];
   public member: Member = {
+    id: 0,
     name: '',
     lastName: '',
     email: '',

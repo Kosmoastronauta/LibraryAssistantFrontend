@@ -11,6 +11,7 @@ import {error} from "util";
 export class AddMemberComponent implements OnInit {
 
   public member: Member = {
+    id: 0,
     name: '',
     lastName: '',
     email: '',

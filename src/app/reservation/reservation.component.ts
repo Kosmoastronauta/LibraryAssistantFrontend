@@ -15,6 +15,13 @@ export class ReservationComponent implements OnInit
   public bookingMember: Member;
   members: Member[] = [];
   public bookToReserve: Book;
+  public memberToFind: Member = {
+    id: 0,
+    name: '',
+    lastName: '',
+    email: '',
+    numberOfCurrentlyBorrowedBooks: 0
+  };
 
   constructor(private reservationService: ReservationService, private memberService:MemberService) {}
 
@@ -48,6 +55,24 @@ export class ReservationComponent implements OnInit
   public reserve()
   {
     alert(this.bookingMember.name)
+  }
+
+  public searchMemberByNameAndLastName()
+  {
+    // alert(this.member.name);
+    if (this.memberToFind.name == "" && this.memberToFind.lastName == "") {
+      this.loadMembers();
+    } else {
+      this.memberService.postSearchMemberNameAndLastName(this.memberToFind).subscribe(
+        res => {
+          this.members = res;
+          // location.reload();
+        },
+        error => {
+          alert("Error while searching member");
+        }
+      );
+    }
   }
 
 }
