@@ -48,13 +48,16 @@ export class ReservationComponent implements OnInit
     },
       error =>
       {
-        alert("Errow while loading members");
+        alert("Error while loading members");
       })
   }
 
   public reserve()
   {
-    alert(this.bookingMember.name)
+
+    this.reservationService.makeReservation(this.bookingMember, this.reservationService.bookToReserve).subscribe(res => {
+
+    }, error => {alert("Error while making reservation")});
   }
 
   public searchMemberByNameAndLastName()

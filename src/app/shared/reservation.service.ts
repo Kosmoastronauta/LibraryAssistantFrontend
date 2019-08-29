@@ -16,8 +16,8 @@ export class ReservationService
   private BASE_URL = "http://localhost:8080";
   private ALL_BOOKS_URL = `${this.BASE_URL}\\books\\`;
   private INFO_ABOUT_NOT_RETURNED_BOOK_IN_RESERVATION_URL = `${this.BASE_URL}\\reservation\\notReturned\\bookId`;
-  private RESERVATION_URL=`${this.BASE_URL}\\reservation\\`;
-  private MAKE_RESERVATION_URL=`${this.RESERVATION_URL}\\makeReservation\\`;
+  private RESERVATIONS_URL=`${this.BASE_URL}\\reservations`;
+  private MAKE_RESERVATION_URL=`${this.RESERVATIONS_URL}\\makeReservation\\`;
 
   constructor(private http: HttpClient) {}
 
@@ -30,7 +30,7 @@ export class ReservationService
 
   makeReservation(member:Member, book:Book)
   {
-    let finalUrl = this.MAKE_RESERVATION_URL + '/' + book.id + '/' + member.id + '/';
+    let finalUrl = this.MAKE_RESERVATION_URL + book.id + '/' + member.id + '/';
     return this.http.post(finalUrl, null);
   }
 }
